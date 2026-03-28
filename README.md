@@ -4,12 +4,12 @@ A **proof-of-concept blockchain-based marketplace** optimized for **zkEVM and La
 
 ## Key Features
 
-- ✅ **Batch Operations**: List and buy items individually or in batches (up to 100 per transaction)
-- ✅ **Gas Optimized**: 58% cheaper per-item costs for bulk purchases; 17% savings for bulk listings
-- ✅ **Off-Chain Indexing**: Event emission for The Graph and indexing services
-- ✅ **Safe Payments**: Seller balance tracking with secure withdrawals
-- ✅ **Benchmarking Built-in**: Measure gas and performance across batch sizes
-- ✅ **React Frontend**: Web interface for marketplace interaction
+- [x] **Batch Operations**: List and buy items individually or in batches (up to 100 per transaction)
+- [x] **Gas Optimized**: 58% cheaper per-item costs for bulk purchases; 17% savings for bulk listings
+- [x] **Off-Chain Indexing**: Event emission for The Graph and indexing services
+- [x] **Safe Payments**: Seller balance tracking with secure withdrawals
+- [x] **Benchmarking Built-in**: Measure gas and performance across batch sizes
+- [x] **React Frontend**: Web interface for marketplace interaction
 
 ## Architecture
 
@@ -329,10 +329,10 @@ POLYGON_ZKEVM_TESTNET_CHAIN_ID=2442
 
 ## Design Principles
 
-✅ **Batch Processing** — Multiple items per transaction  
-✅ **Event-Based Indexing** — Offload to The Graph  
-✅ **Efficient Storage** — Mappings for O(1) access  
-✅ **Gas Optimization** — Calldata-heavy, storage-light
+- [x] **Batch Processing** — Multiple items per transaction
+- [x] **Event-Based Indexing** — Offload to The Graph
+- [x] **Efficient Storage** — Mappings for O(1) access
+- [x] **Gas Optimization** — Calldata-heavy, storage-light
 
 ## License
 
