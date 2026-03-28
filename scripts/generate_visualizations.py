@@ -100,10 +100,8 @@ def _is_local_network_key(network_key: str) -> bool:
     """Return True when network key represents local/dev chains."""
     lowered = network_key.strip().lower()
     local_prefixes = ("localhost:", "hardhat:", "127.0.0.1:")
-    if lowered.startswith(local_prefixes):
-        return True
-    # Chain-only fallback checks for local dev chain IDs.
-    return lowered.endswith(":1337") or lowered.endswith(":31337")
+    local_suffixes = (":1337", ":31337")
+    return lowered.startswith(local_prefixes) or lowered.endswith(local_suffixes)
 
 
 def _extract_benchmark_data_for_network(network_run: dict[str, Any]) -> BenchmarkData | None:
