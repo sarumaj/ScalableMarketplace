@@ -29,7 +29,6 @@ module.exports = {
     hardhat: {
       chainId: 1337,
     },
-    // Deprecated/inconsistent testnet support. Keep for demonstration only.
     polygonZkEVMTestnet: {
       url:
         process.env.POLYGON_ZKEVM_TESTNET_RPC_URL ||
