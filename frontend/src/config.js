@@ -2,12 +2,20 @@ import deployedAddresses from "./deployedAddresses.json";
 
 export const CHAIN_CONFIG = {
   1337: {
-    chainIdHex: "0x539",
+    chainIdHex: "0x539", // 1337
     chainName: "Hardhat Local",
     nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
     rpcUrls: ["http://127.0.0.1:8545"],
     blockExplorerUrls: [],
     faucetUrl: null,
+  },
+  2442: {
+    chainIdHex: "0x98a", // 2442
+    chainName: "Polygon zkEVM Cardona",
+    nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+    rpcUrls: ["https://rpc.cardona.zkevm-rpc.com"],
+    blockExplorerUrls: ["https://explorer.zkevm-testnet.com"],
+    faucetUrl: "https://www.alchemy.com/faucets/ethereum-sepolia",
   },
 };
 
