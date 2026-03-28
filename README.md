@@ -310,6 +310,9 @@ If you only provide one key, it fails with: `At least two funded accounts are re
 5. Visualize → `python3 scripts/generate_visualizations.py --input benchmark_results.json --output-dir benchmarks`
 6. Frontend → `cd frontend && npm run dev`
 
+![Web Frontend](docs/brave_screenshot_localhost.png)
+_Web Frontend Application facilitating deployed marketplace contract_
+
 ## Environment Configuration
 
 Create `.env` in project root (for testnet deployment):
