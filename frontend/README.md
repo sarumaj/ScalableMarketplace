@@ -29,7 +29,7 @@ npm run dev
 
 ## Contract ABI and Address Sync
 
-From the `Blockchain` root:
+From the project root:
 
 ```bash
 npm run compile
