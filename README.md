@@ -334,15 +334,6 @@ POLYGON_ZKEVM_TESTNET_CHAIN_ID=2442
 ✅ **Efficient Storage** — Mappings for O(1) access  
 ✅ **Gas Optimization** — Calldata-heavy, storage-light
 
-## Future Work
-
-- Multi-token support (ERC-20, ERC-721)
-- On-chain filtering/search
-- Escrow mechanism
-- Reputation system
-- Auctions
-- Uniswap price feed integration
-
 ## License
 
 MIT
