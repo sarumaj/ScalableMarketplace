@@ -18,14 +18,11 @@ try {
   const artifact = JSON.parse(readFileSync(artifactPath, "utf8"));
   const abi = artifact.abi;
 
-  // Ensure frontend/src directory exists
   mkdirSync(dirname(frontendAbiPath), { recursive: true });
-
-  // Write ABI to frontend
   writeFileSync(frontendAbiPath, JSON.stringify(abi, null, 2));
 
-  console.log("✅ ABI successfully copied to frontend/src/abi.json");
+  console.log("ABI successfully copied to frontend/src/abi.json");
 } catch (error) {
-  console.error("❌ Error copying ABI:", error.message);
+  console.error("Error copying ABI:", error.message);
   process.exit(1);
 }
