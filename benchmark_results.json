@@ -1,0 +1,635 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "scripts/benchmark.js",
+  "runs": {
+    "localhost:1337": {
+      "networkName": "localhost",
+      "chainId": "1337",
+      "byBatchSize": {
+        "1": {
+          "timestamp": "2026-03-28T19:39:49.910Z",
+          "contractAddress": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+          "batchSize": 1,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "6.50",
+              "txHash": "0xc259aad35165a8796317f6d04dec3ecaf82331530e9c07cb0c3fc5dd4fb3b9c5"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "151324",
+              "durationMs": "6.04",
+              "txHash": "0xb9865c68c081232c3cad82e0b50153d4ec376d38a85348352ab9103ee707cc0f"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "5.28",
+              "txHash": "0x9c9a2e403d70076ff61f1e1913c5b8d05d39e9710b0b558f611e22b152ee6864"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "58124",
+              "durationMs": "9.80",
+              "txHash": "0x96c945af3800a9cf661924e629309d74a7a104ba4e133368155f0664364276b9"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "28513",
+              "durationMs": "5.12",
+              "txHash": "0x8188a955700f105e306814f03c3eb6d8e50b455492a39e0f9005cf5f59c09388"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 151324,
+            "buyItem": 72536,
+            "batchBuyItems": 58124,
+            "withdraw": 28513
+          }
+        },
+        "3": {
+          "timestamp": "2026-03-28T19:39:50.651Z",
+          "contractAddress": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
+          "batchSize": 3,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "5.84",
+              "txHash": "0x95da7dcebbf35378c08b5a9a473b8a427f02f59170293f65e652922f00fd7467"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "386364",
+              "durationMs": "10.35",
+              "txHash": "0x586b1526e8b2330ee0b4adfdfd240c9e4cacf10aaa2c7f9b2ecf06e1e14b9a1f"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "5.10",
+              "txHash": "0xd46e2d4a07bfa1e5cf7e52660620c701b3c07aa084cf96da03e809a2a2e4eefb"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "118092",
+              "durationMs": "4.95",
+              "txHash": "0x190242bc389340ffdaeb2bdecc05cf18d7cf3dbd179ddb4effed7eaabdf3ac79"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "28513",
+              "durationMs": "3.97",
+              "txHash": "0x7754c1be3e34dd37b50f24ab6a95a1bbf498d27ba5d7ada913b58d0594dd6725"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 386364,
+            "buyItem": 72536,
+            "batchBuyItems": 118092,
+            "withdraw": 28513
+          }
+        },
+        "5": {
+          "timestamp": "2026-03-28T19:39:51.416Z",
+          "contractAddress": "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+          "batchSize": 5,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "6.61",
+              "txHash": "0x0ee5690e4741eb917978e02f7fdf09a55e01f66896d07bec8417e5850adf6de2"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "621429",
+              "durationMs": "8.39",
+              "txHash": "0xcdf161c0ea300ba712090f8f56765b61d29e084bfe1726f970ede354270422a0"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "4.34",
+              "txHash": "0xa8d8133ca27e05939a2c4bd9dc77479bb979cf2f6fa151f470166c16ecc95f91"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "178060",
+              "durationMs": "8.16",
+              "txHash": "0xc429ebef095a2bf96cbd0b9fc07c22110f5d043a7d4859c16b6d84e448b6b8ef"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "28513",
+              "durationMs": "4.32",
+              "txHash": "0x70cb259569d956de3ae326a95f6f8010f5cda87e6ddf76e937773171ae97dcc1"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 621429,
+            "buyItem": 72536,
+            "batchBuyItems": 178060,
+            "withdraw": 28513
+          }
+        },
+        "10": {
+          "timestamp": "2026-03-28T19:39:52.178Z",
+          "contractAddress": "0x0DCd1Bf9A1b36cE34237eEaFef220932846BCD82",
+          "batchSize": 10,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "6.36",
+              "txHash": "0x8b0cedf586ce1694155dee2cf4d2155664ce2511e9b8879f3267b62378a87233"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "1209079",
+              "durationMs": "13.04",
+              "txHash": "0xb67a78cadfcbf9695655cee9551cac57fe2778f47f2b1a2cea3d8147e3168149"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "6.37",
+              "txHash": "0xdd9f9d719bd8f265921fdaacc029d80f4290fd06c0f18e89bb57acc561fbfb87"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "327980",
+              "durationMs": "8.62",
+              "txHash": "0x2a7a0a5a9b98e81c7261e40e33b7ec03e32e597c6580f4950ac0fe51acb722bd"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "28513",
+              "durationMs": "4.08",
+              "txHash": "0x77bff409b2b01a59e2afeead08bb961e361fe78b77eeb2654f157bb331a504a7"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 1209079,
+            "buyItem": 72536,
+            "batchBuyItems": 327980,
+            "withdraw": 28513
+          }
+        },
+        "25": {
+          "timestamp": "2026-03-28T19:39:52.928Z",
+          "contractAddress": "0x9A9f2CCfdE556A7E9Ff0848998Aa4a0CFD8863AE",
+          "batchSize": 25,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "7.47",
+              "txHash": "0x9c1f7d4be5fa6f5af247831fd908ef9f2890f24c98892092464863d5a3f7f2d4"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "2972245",
+              "durationMs": "18.93",
+              "txHash": "0xd663294b30b873759e9745661353c1f5db9a66f597d4995c77a5befc132da5b2"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "5.06",
+              "txHash": "0x9b4116ad31dee2c673d97dd2d23d14fe03449cb79f37d4ecd748cdb0dd49097e"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "777740",
+              "durationMs": "9.94",
+              "txHash": "0x2a9e4b80f0f74ee84a2076679177384a1a06e4c9a59c621284438cb919e9b1ce"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "28513",
+              "durationMs": "3.83",
+              "txHash": "0x38799471d8b390ab9fa251c88cf9ff8f20be4ea2040e83a7000ef5e744ed3ff6"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 2972245,
+            "buyItem": 72536,
+            "batchBuyItems": 777740,
+            "withdraw": 28513
+          }
+        },
+        "50": {
+          "timestamp": "2026-03-28T19:39:53.683Z",
+          "contractAddress": "0x59b670e9fA9D0A427751Af201D676719a970857b",
+          "batchSize": 50,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "5.22",
+              "txHash": "0xa93be56fb66d3f60df4ddcfe439c614bce918092999536f9ebae492f564ba832"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "5910828",
+              "durationMs": "20.29",
+              "txHash": "0x48ec178e7c618efe8de4094d99f333088ced5ce31d16456e26e2d4cf04160262"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "6.46",
+              "txHash": "0x5a8b2765cf7bdd5a10fbe5db443957d4201fab56b65aebc8dc04483ec4dca8c8"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "1527340",
+              "durationMs": "15.14",
+              "txHash": "0x33274588cce7e72270e2f1d5bb1b4a79af5f76ae6628007661cf21fa796834ad"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "28513",
+              "durationMs": "4.28",
+              "txHash": "0x7963c02e74ef12900b8e7bbc668c8e3f9d3b184127a84b20731dd27bf9a329e2"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 5910828,
+            "buyItem": 72536,
+            "batchBuyItems": 1527340,
+            "withdraw": 28513
+          }
+        },
+        "100": {
+          "timestamp": "2026-03-28T19:39:54.488Z",
+          "contractAddress": "0x4A679253410272dd5232B3Ff7cF5dbB88f295319",
+          "batchSize": 100,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "6.40",
+              "txHash": "0x29f1987bd182bfe989c2e1610af8d62ed3bfab51563d66e2c904584a2025c9f4"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "11788733",
+              "durationMs": "38.52",
+              "txHash": "0xef0a552537d401aed09440f91865c33c9a9428a6a5de2a151a938b8c05b5a324"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "5.77",
+              "txHash": "0x0bfe683729417e920aa0fec271a4ac7e0a45f28e3e8acd635d611eaa14496def"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "3026540",
+              "durationMs": "23.22",
+              "txHash": "0x8c60980002d6413cafa68e5d97c3c8207ee08e0be42dada336638327bf3326e9"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "28513",
+              "durationMs": "4.22",
+              "txHash": "0x09b28c54dd3240964da0f4fd111812850da96717a5b3d3fed4a717dfd6b197c6"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 11788733,
+            "buyItem": 72536,
+            "batchBuyItems": 3026540,
+            "withdraw": 28513
+          }
+        }
+      }
+    },
+    "polygonZkEVMTestnet:2442": {
+      "networkName": "polygonZkEVMTestnet",
+      "chainId": "2442",
+      "byBatchSize": {
+        "1": {
+          "timestamp": "2026-03-28T20:23:37.891Z",
+          "contractAddress": "0x97073BA06456B234922cf33d3FD8CA9F0Ee6e7c2",
+          "batchSize": 1,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "3025.41",
+              "txHash": "0x8966ec511b014a64652fd1ba98729cd6c01a778be1adbb69a51daa903a624ff3"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "151324",
+              "durationMs": "3561.62",
+              "txHash": "0xbbfb832f0cf78f054e5395cc3cd31b0fb51a8bb5b70c39f083480c26517dc098"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "3051.64",
+              "txHash": "0x9c0bb761978471941176b3384b8aaf64c54db85be2645922e2581ed5ac0693b2"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "58124",
+              "durationMs": "3555.06",
+              "txHash": "0xc1a4960aed161984e48916da9f2229191e5a475e68d4d619d28ec824077a3c75"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "18313",
+              "durationMs": "3557.41",
+              "txHash": "0x6c40712702a83a403c2b12ba8b93be8b4277fd773f71d5343a23f7ac71196268"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 151324,
+            "buyItem": 72536,
+            "batchBuyItems": 58124,
+            "withdraw": 18313
+          }
+        },
+        "3": {
+          "timestamp": "2026-03-28T20:23:58.853Z",
+          "contractAddress": "0x1CBA21502cf7cc4E3a2db7F2Da5fD7060D94EdE6",
+          "batchSize": 3,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "3581.88",
+              "txHash": "0x5c7687f28d6994b90dab112f6c71e312eee5cd29015ef8dc22be95e764917b15"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "386364",
+              "durationMs": "4114.84",
+              "txHash": "0xf27a646b7ed39a4a6e9667d25bb2af2997db4b4deeb2b1523b2dd45fcc7bd176"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "4089.16",
+              "txHash": "0xe900f2dd79810dc93b223c1778edb408e8115de593f7e6a331dea7467575496d"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "118092",
+              "durationMs": "2495.83",
+              "txHash": "0xcadf55a430c8556fca47b7760cdf8254e6437df0c373b8c16de0b855fd9f75c9"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "18313",
+              "durationMs": "3573.85",
+              "txHash": "0x94ef07988c35a207af921cb1e1786901d806044c766108674392d6c34478a7d5"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 386364,
+            "buyItem": 72536,
+            "batchBuyItems": 118092,
+            "withdraw": 18313
+          }
+        },
+        "5": {
+          "timestamp": "2026-03-28T20:24:19.723Z",
+          "contractAddress": "0x060B0EcF62c57b9B3B0cef5487B3263e5D51aa16",
+          "batchSize": 5,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "3453.52",
+              "txHash": "0x61e4b56452936dac07ef9698517ba4bf2422b98c7d43b8a687fc365ba377758f"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "621429",
+              "durationMs": "3570.96",
+              "txHash": "0xc08808ae65a3d210b735faf8b91d4d2e3a7770e80a434ceb6ded7c6d34c7d304"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "3036.57",
+              "txHash": "0xc4fb8aab230454cb4aa56274332974777e62a9519005cf7754f72ae1a91cff41"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "178060",
+              "durationMs": "3586.53",
+              "txHash": "0x11e42a38a6c570f7c3d9158cd785f4ab20f5a79d75097c47b1dc213a6fbf0e7c"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "18313",
+              "durationMs": "3563.58",
+              "txHash": "0x64a24822f4ff5b6cfcfd17f6ad8deb0e2c60ce43e365a57a831e3bf975882add"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 621429,
+            "buyItem": 72536,
+            "batchBuyItems": 178060,
+            "withdraw": 18313
+          }
+        },
+        "10": {
+          "timestamp": "2026-03-28T20:24:41.189Z",
+          "contractAddress": "0xB13461833E190cC2e7b880C05A66aB49065502D3",
+          "batchSize": 10,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "3532.89",
+              "txHash": "0xa17c6472b7a17a430e05c3d713ca533a3cff107cdedd7101f8aa279cddc99ede"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "1209079",
+              "durationMs": "4633.61",
+              "txHash": "0xc4868ef893a3cde5061a35946cd21c3798e14533f25f60ba43fee0b53ccbda46"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "3020.79",
+              "txHash": "0xe35a50b8e70589715cab4908962f1fb2a32ea8888c57ac8f449f49f546572863"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "327980",
+              "durationMs": "3540.34",
+              "txHash": "0x6ba22e96d16b653dd4ffcbea5967de58263841a33952bd15a73da31772a0a10d"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "18313",
+              "durationMs": "3559.42",
+              "txHash": "0x608dbca8289f3aea55961912af394477f2ebdf15b1d89d36f7a1ab14e382165e"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 1209079,
+            "buyItem": 72536,
+            "batchBuyItems": 327980,
+            "withdraw": 18313
+          }
+        },
+        "25": {
+          "timestamp": "2026-03-28T20:25:04.325Z",
+          "contractAddress": "0xb6C2f80cb905ceB1191D106572e3cd4D9cDA93E6",
+          "batchSize": 25,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "2987.56",
+              "txHash": "0xf39014647eb766f4007bcffea1f7457e616345c1db05e231b5488d8f80ed638a"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "2972245",
+              "durationMs": "6836.97",
+              "txHash": "0xc7a5b17392d9a75796e974740e5c22367351915daabca1c846b9887ba64c9e22"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "2509.98",
+              "txHash": "0xef881e1b3e94d293a7c63280a175829c48d2c33502869c2b9ea3edaf7a046e0b"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "777740",
+              "durationMs": "4102.26",
+              "txHash": "0xd52d37605407ec92e6c3dc6982364fecc8aaf3399da52f80e578482f7568f67f"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "18313",
+              "durationMs": "3013.78",
+              "txHash": "0xeee0f7145596a353f304631243c428baffe46b6886962bf4bab2c7cf89cff856"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 2972245,
+            "buyItem": 72536,
+            "batchBuyItems": 777740,
+            "withdraw": 18313
+          }
+        },
+        "50": {
+          "timestamp": "2026-03-28T20:25:30.829Z",
+          "contractAddress": "0x0497B5163a43D439E81De46e99CaB12E980549C9",
+          "batchSize": 50,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "3542.90",
+              "txHash": "0x12c1b3f7f23cafadea2be313c8595948026e4c0d0d8d6b3e955b8cd6fab79ee3"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "5910828",
+              "durationMs": "9046.12",
+              "txHash": "0x123e6c45e7240ce0a7e8563b73cf66533a3b1ce5b27a387b8168843c1e64b45f"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "2484.64",
+              "txHash": "0x1b1607a117e171cb39149df4297d30c92df472cf4b5e6d640944ad3c0b3a453d"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "1527340",
+              "durationMs": "5215.73",
+              "txHash": "0x1c331c58c58e4c7cce8f3ed5044fc63677de9d395fea028f0591ef80c6197a37"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "18313",
+              "durationMs": "2505.28",
+              "txHash": "0x596a333c7e6676cbbca74ea2f158cded0a05caa2c1472e594d1dc6635a2c419a"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 5910828,
+            "buyItem": 72536,
+            "batchBuyItems": 1527340,
+            "withdraw": 18313
+          }
+        },
+        "100": {
+          "timestamp": "2026-03-28T20:26:02.074Z",
+          "contractAddress": "0x6e93B58b1A8B90D0A202FF20Ae8581e450359699",
+          "batchSize": 100,
+          "results": [
+            {
+              "label": "listItem",
+              "gasUsed": "142458",
+              "durationMs": "3606.58",
+              "txHash": "0x3ad8c1888f44a5ab7bf0f1722200c84b65bad9c10dc72e5cb2362e563f7cbeb0"
+            },
+            {
+              "label": "batchListItems",
+              "gasUsed": "11788733",
+              "durationMs": "13479.33",
+              "txHash": "0x18dcae6f00cc9873bababf5f4addfa256f198e657a207657ec0c566fffe521fd"
+            },
+            {
+              "label": "buyItem",
+              "gasUsed": "72536",
+              "durationMs": "3047.68",
+              "txHash": "0x938187b83a09c9e6ab1714cf2e6bcda6d44fd9e44d9a9f90ff9a491933bf9456"
+            },
+            {
+              "label": "batchBuyItems",
+              "gasUsed": "3026540",
+              "durationMs": "4767.99",
+              "txHash": "0xd86f22de1f88bf1fdb6e0e48a881d0b3c54b307fb0b2cf2c9edf405544d6ac0a"
+            },
+            {
+              "label": "withdraw",
+              "gasUsed": "18313",
+              "durationMs": "3082.08",
+              "txHash": "0x68f38b71c3c50e55db80a12476b33add14ce5172015eefbebc1bf826e9db3c17"
+            }
+          ],
+          "metrics": {
+            "listItem": 142458,
+            "batchListItems": 11788733,
+            "buyItem": 72536,
+            "batchBuyItems": 3026540,
+            "withdraw": 18313
+          }
+        }
+      }
+    }
+  },
+  "updatedAt": "2026-03-28T20:26:02.074Z"
+}
