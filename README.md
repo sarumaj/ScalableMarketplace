@@ -197,7 +197,7 @@ These values come from `benchmark_results.json` keys:
 _Per-item gas decreases with batch size; buying operations show dramatic savings (50%+ at scale)_
 
 ![Gas Consumption by Operation](benchmarks/gas_usage_comparison_localhost_1337.png)
-_Comparison of operation costs: listing (~140K), batch listing/buying (~120K/40K), withdrawals (28K)_
+_Comparison of operation costs: listing (~140K), buying (~70k), batch listing/buying (~380K/120K), withdrawals (28K)_
 
 ![Polygon zkEVM Gas Efficiency](benchmarks/batch_size_efficiency_polygonzkevmtestnet_2442.png)
 _Same gas-efficiency shape on Cardona, but measured on a live rollup testnet_
