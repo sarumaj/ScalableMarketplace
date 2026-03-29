@@ -64,30 +64,36 @@ contract ScalableMarketplace {
         string[] calldata names,
         uint256[] calldata prices
     ) external validBatchSize(names.length) returns (uint256[] memory) {
-        require(names.length == prices.length, "Array length mismatch");
+        uint256 length = names.length;
+        require(length == prices.length, "Array length mismatch");
 
-        uint256[] memory itemIds = new uint256[](names.length);
+        uint256[] memory itemIds = new uint256[](length);
+        address seller = msg.sender;
 
-        for (uint256 i = 0; i < names.length; i++) {
+        for (uint256 i = 0; i < length;) {
             require(prices[i] > 0, "Price must be positive");
 
             uint256 itemId = itemCount++;
 
             items[itemId] = Item({
                 id: itemId,
-                seller: msg.sender,
+                seller: seller,
                 name: names[i],
                 price: prices[i],
                 sold: false
             });
 
-            userItems[msg.sender].push(itemId);
+            userItems[seller].push(itemId);
             itemIds[i] = itemId;
 
-            emit ItemListed(itemId, msg.sender, prices[i]);
+            emit ItemListed(itemId, seller, prices[i]);
+
+            unchecked {
+                ++i;
+            }
         }
 
-        emit BatchProcessed(names.length, block.timestamp);
+        emit BatchProcessed(length, block.timestamp);
 
         return itemIds;
     }
@@ -116,28 +122,40 @@ contract ScalableMarketplace {
         payable 
         validBatchSize(itemIds.length) 
     {
+        uint256 length = itemIds.length;
+        address buyer = msg.sender;
         uint256 totalPrice = 0;
 
         // First pass: validate and calculate total
-        for (uint256 i = 0; i < itemIds.length; i++) {
-            Item storage item = items[itemIds[i]];
+        for (uint256 i = 0; i < length;) {
+            uint256 itemId = itemIds[i];
+            Item storage item = items[itemId];
             require(!item.sold, "Item already sold");
-            require(item.seller != msg.sender, "Cannot buy own item");
+            require(item.seller != buyer, "Cannot buy own item");
             totalPrice += item.price;
+
+            unchecked {
+                ++i;
+            }
         }
 
         require(msg.value == totalPrice, "Incorrect payment");
 
         // Second pass: execute purchases
-        for (uint256 i = 0; i < itemIds.length; i++) {
-            Item storage item = items[itemIds[i]];
+        for (uint256 i = 0; i < length;) {
+            uint256 itemId = itemIds[i];
+            Item storage item = items[itemId];
             item.sold = true;
             userBalance[item.seller] += item.price;
 
-            emit ItemSold(itemIds[i], msg.sender, item.seller);
+            emit ItemSold(itemId, buyer, item.seller);
+
+            unchecked {
+                ++i;
+            }
         }
 
-        emit BatchProcessed(itemIds.length, block.timestamp);
+        emit BatchProcessed(length, block.timestamp);
     }
 
     /**
@@ -170,10 +188,15 @@ contract ScalableMarketplace {
         view 
         returns (Item[] memory) 
     {
-        Item[] memory result = new Item[](itemIds.length);
+        uint256 length = itemIds.length;
+        Item[] memory result = new Item[](length);
 
-        for (uint256 i = 0; i < itemIds.length; i++) {
+        for (uint256 i = 0; i < length;) {
             result[i] = items[itemIds[i]];
+
+            unchecked {
+                ++i;
+            }
         }
 
         return result;
