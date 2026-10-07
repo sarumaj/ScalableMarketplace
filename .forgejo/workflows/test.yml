@@ -1,0 +1,38 @@
+# Converted from .github/workflows/test.yml for Forgejo by
+# scripts/github_to_forgejo.py (HomeLab); --move-ci rewrites it. Jobs needing
+# GitHub, macOS, Windows or secrets Forgejo lacks stay in the GitHub file.
+name: Test
+'on':
+  push:
+    branches:
+    - main
+    - renovate/all-patch
+  pull_request: null
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version:
+        - 18.x
+        - 20.x
+        - 22.x
+    steps:
+    - uses: https://github.com/actions/checkout@v7
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: https://github.com/actions/setup-node@v7
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: npm
+    - name: Root - install
+      run: npm ci
+    - name: Root - compile
+      run: npm run compile
+    - name: Root - test
+      run: npm test
+    - name: Frontend - install
+      run: npm ci
+      working-directory: frontend
+    - name: Frontend - build
+      run: npm run build
+      working-directory: frontend
