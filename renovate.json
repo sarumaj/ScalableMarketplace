@@ -2,5 +2,29 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "local>dawid/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "description": "vite and its React plugin only install together (each plugin major supports certain vite majors): one pull request for both, majors included",
+      "matchPackageNames": [
+        "vite",
+        "@vitejs/**"
+      ],
+      "groupName": "vite"
+    },
+    {
+      "description": "Hardhat 3 is a rewrite (new plugins, ESM configuration, Node.js 22): its majors only on approval in the dependency dashboard, as a planned migration",
+      "matchPackageNames": [
+        "hardhat",
+        "@nomicfoundation/**",
+        "@typechain/hardhat",
+        "hardhat-gas-reporter",
+        "solidity-coverage"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "dependencyDashboardApproval": true
+    }
   ]
 }
