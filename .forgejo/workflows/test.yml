@@ -27,8 +27,21 @@ jobs:
       run: npm ci
     - name: Root - compile
       run: npm run compile
+    # As JUnit-style XML (MOCHA_JUNIT, hardhat.config.cjs) for the report below, which
+    # also prints the failed tests' messages.
     - name: Root - test
+      id: tests
       run: npm test
+      env:
+        MOCHA_JUNIT: /tmp/mocha.xml
+    # The results as one comment per Node version on the pull request
+    # (dawid/ci-actions), also when tests failed.
+    - name: Test report
+      if: always() && steps.tests.outcome != 'skipped'
+      uses: https://git.ciepiela.org/dawid/ci-actions/test-report@main
+      with:
+        junit: /tmp/mocha.xml
+        name: Test / build (Node ${{ matrix.node-version }})
     - name: Frontend - install
       run: npm ci
       working-directory: frontend

@@ -16,6 +16,11 @@ function getAccounts(singleKeyName, multiKeyName) {
 }
 
 module.exports = {
+  // MOCHA_JUNIT names a file: the results as JUnit-style XML there instead of the
+  // usual output, from Mocha's own xunit reporter (CI's test report reads it).
+  mocha: process.env.MOCHA_JUNIT
+    ? { reporter: "xunit", reporterOptions: { output: process.env.MOCHA_JUNIT } }
+    : {},
   solidity: {
     version: "0.8.20",
     settings: {
